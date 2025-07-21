@@ -1,0 +1,28 @@
+{
+  "name": "auth-boilerplate-cli",
+  "version": "1.0.0",
+  "description": "This is a CLI-based NPM package to scaffold authentication boilerplate for multiple frameworks",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oludefiyinfoluwa06/auth-boilerplate-cli.git"
+  },
+  "keywords": [
+    "auth-scaffold",
+    "authentication",
+    "node-cli",
+    "npm-package",
+    "express-auth",
+    "nest-auth"
+  ],
+  "author": "Olude Fiyinfoluwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oludefiyinfoluwa06/auth-boilerplate-cli/issues"
+  },
+  "homepage": "https://github.com/Oludefiyinfoluwa06/auth-boilerplate-cli#readme"
+}
