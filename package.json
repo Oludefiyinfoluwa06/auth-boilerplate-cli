@@ -24,5 +24,9 @@
   "bugs": {
     "url": "https://github.com/Oludefiyinfoluwa06/auth-boilerplate-cli/issues"
   },
-  "homepage": "https://github.com/Oludefiyinfoluwa06/auth-boilerplate-cli#readme"
+  "homepage": "https://github.com/Oludefiyinfoluwa06/auth-boilerplate-cli#readme",
+  "dependencies": {
+    "commander": "^14.0.0",
+    "inquirer": "^12.8.1"
+  }
 }

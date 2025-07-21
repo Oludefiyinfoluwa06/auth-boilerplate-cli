@@ -1,5 +1,16 @@
-const welcome = () => {
-  console.log('Welcome to this CLI-based authentication scaffolding system!');
-}
+import { Command } from 'commander';
+import { generateAuthBoilerplate } from './lib/generate-auth.lib.js';
 
-welcome();
+const program = new Command();
+
+program
+  .name('auth-boilerplate-cli')
+  .description('CLI for managing authentication boilerplate tasks')
+  .version('1.0.0')
+  .command('create-auth')
+  .description('Create a new authentication boilerplate')
+  .option('-f, --framework <type>', 'Specify the framework (e.g., express.js, nest.js)')
+  .option('-s, --strategy <type>', 'Specify the authentication strategy (e.g., JWT, OAuth)')
+  .action((options) => generateAuthBoilerplate(options));
+
+program.parse(process.argv);
