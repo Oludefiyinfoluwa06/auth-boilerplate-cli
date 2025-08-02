@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "repository": {
     "type": "git",
@@ -16,8 +16,7 @@
     "authentication",
     "node-cli",
     "npm-package",
-    "express-auth",
-    "nest-auth"
+    "express-auth"
   ],
   "author": "Olude Fiyinfoluwa",
   "license": "ISC",
@@ -29,7 +28,9 @@
     "chalk": "^5.4.1",
     "commander": "^14.0.0",
     "inquirer": "^12.8.1",
-    "jest": "^30.0.5",
     "ora": "^8.2.0"
+  },
+  "devDependencies": {
+    "jest": "^30.0.5"
   }
 }

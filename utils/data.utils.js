@@ -1,2 +1,2 @@
 export const FRAMEWORKS = ['express.js'];
-export const STRATEGIES = ['jwt', 'oauth'];
+export const STRATEGIES = ['jwt'];
