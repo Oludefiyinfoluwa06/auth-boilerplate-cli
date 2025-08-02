@@ -1,5 +1,28 @@
 import { Command } from 'commander';
-import { generateAuthBoilerplate } from './lib/generate-auth.lib.js';
+import { requireOptions } from './prompts/select-options.prompt.js';
+import { readDir } from './utils/fs.utils.js';
+import { log } from './helpers/logger.helper.js';
+import { handleExpressSetup } from './frameworks/express.handler.js';
+
+const generateAuthBoilerplate = async (options) => {
+  options = await requireOptions(options);
+  log.info(`Generating authentication boilerplate with the following options: framework: ${options.framework}, strategy: ${options.strategy}`);
+
+  try {
+    const data = await readDir(process.cwd());
+
+    if (data.includes('package.json')) {
+      if (options.framework === 'express.js') {
+        await handleExpressSetup();
+      }
+    } else {
+      log.error('You need to set up an express project');
+      return;
+    }
+  } catch (error) {
+    log.error(`Failed to read directory: ${error.message}`);
+  }
+}
 
 const program = new Command();
 

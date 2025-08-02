@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/Oludefiyinfoluwa06/auth-boilerplate-cli#readme",
   "dependencies": {
+    "chalk": "^5.4.1",
     "commander": "^14.0.0",
     "inquirer": "^12.8.1",
     "jest": "^30.0.5",
